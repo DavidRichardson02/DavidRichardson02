@@ -23,16 +23,13 @@
         <stop offset="100%" stop-color="#facc15" />
       </linearGradient>
     </defs>
-
     <!-- Central "FPGA" node -->
     <rect x="95" y="22" rx="6" ry="6" width="70" height="36" fill="#111827" stroke="url(#grad-orbit)" stroke-width="1.4" />
     <text x="130" y="44" text-anchor="middle" font-size="11" fill="#e5e7eb" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif">
       physics → RTL
     </text>
-
     <!-- Orbit path -->
     <ellipse cx="130" cy="40" rx="110" ry="28" fill="none" stroke="rgba(148,163,184,0.4)" stroke-width="1" stroke-dasharray="4 6" />
-
     <!-- Orbiting node (animated) -->
     <circle id="orbiter" cx="240" cy="40" r="4" fill="#facc15">
       <animateMotion
@@ -41,7 +38,6 @@
         path="M 20,40 A 110,28 0 1 1 240,40 A 110,28 0 1 1 20,40"
       />
     </circle>
-
     <!-- Labels -->
     <text x="35" y="20" text-anchor="middle" font-size="9" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif">
       math models
@@ -55,6 +51,7 @@
 <p align="center">
   <b>Structured. Physics-driven. Bottom-up engineering.</b>
 </p>
+
 
 I like taking ideas from first principles and building systems around them from the ground up — **physical theory → mathematical models → algorithms → RTL/C/C++/assembly → instrumentation tools → analysis and visualization**.  
 My work takes place predominantly at the intersection of **physics, mathematics, and computation** — and spans **real-time FPGA sensing and control systems**, **high-performance numerical simulation engines**, and **robust C data analysis+modeling pipelines**, unified by a focus on correctness, timing, structured dataflow, rigorous documentation, and deep technical understanding.
