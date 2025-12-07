@@ -1,10 +1,13 @@
-# 👋 Hi, I'm David Richardson  
+<p align="center">
+  <img src="assets/banner_vga.png" width="100%" alt="FPGA Banner">
+</p>
 
-Computer Engineering student building systems at the intersection of **physics, mathematics, and computation** — from FPGA-based real-time sensing and control to high-performance C++ simulation engines and data analysis pipelines.
+<h1 align="center">David Richardson</h1>
+<h3 align="center">Computer Engineering • FPGA/RTL Systems • Physics-Driven Simulation • Automated Data Analysis</h3>
 
-I like taking ideas from first principles all the way to hardware and tools:  
-**theory → models → algorithms → RTL → instrumentation → analysis**.  
-My work emphasizes correctness, timing, structured dataflow, and rigorous documentation.
+I like taking ideas from first principles and building systems around them from the ground up — **physical theory → mathematical models → algorithms → RTL/C/C++/assembly → instrumentation tools → analysis and visualization**.  
+My work takes place predominantly at the intersection of **physics, mathematics, and computation** — and spans **real-time FPGA sensing and control systems**, **high-performance numerical simulation engines**, and **robust C data analysis+modeling pipelines**, unified by a focus on correctness, timing, structured dataflow, rigorous documentation, and deep technical understanding.
+
 
 ---
 
@@ -16,65 +19,133 @@ My work emphasizes correctness, timing, structured dataflow, and rigorous docume
 
 ---
 
-## 🚀 Featured Project — FPGA_Signal_Control_System  
 
-A mixed-signal real-time measurement and control platform built entirely in hardware on a **Nexys A7-100T (Artix-7)**.
 
-**What it does**
+# 🚀 Featured Work
 
-- **2D spatial mapping** using a Pmod **Time-of-Flight (ISL29501)** sensor swept over angle  
-- **Temperature telemetry → PWM fan control** with hysteresis and occupancy extensions  
-- **PIR motion sensing** with temporal decay logic  
-- **Rotary encoder–driven surveying** and HUD interaction  
-- **Structured UART telemetry** (timestamp, θ_q15, dist_mm, temperature, duty, status, CRC)  
-- **Full 640×480 VGA pipeline**:
-  - ToF range plot with framebuffer + rings/axes  
-  - Right-side HUD (temperature bar, fan tiles, PIR, UART counters, angle indicators)  
-  - Double-buffered logo/image viewport streamed over UART  
+## **FPGA_Signal_Control_System**  
+*A hardware-only sensing & control laboratory running entirely on an Artix-7 FPGA.*
 
-**How it’s built**
+- Real-time **Time-of-Flight distance mapping**
+- **VGA HUD engine** with framebuffer range plots and status overlays  
+- **Temperature telemetry → PWM fan control** (Q1.15 fixed-point)  
+- **PIR-based occupancy sensing**  
+- **Rotary encoder** driven manual/automatic surveying  
+- **Structured UART telemetry** (timestamp, θ, distance, temp, duty, CRC)  
+- Clean **CDC boundaries**, ready/valid datapaths, disciplined module partitioning  
 
-- Single 100 MHz fabric clock, with tick-enable–based slow behavior  
-- Q1.15 fixed-point numerics shared between RTL, MATLAB, and C++ tools  
-- CDC-safe bridges to a 25 MHz pixel clock domain  
-- Ready/valid streaming between ToF sensor, packetizer, UART TX/RX, and video/telemetry paths  
-
-(Full theory-of-operation, cheat sheet, and poster live in the project repo and portfolio.)
+<p align="center">
+  <img src="assets/VGA_Output.jpeg" width="75%">
+</p>
 
 ---
 
-## 🧠 Technical Focus Areas
+## **Barnes–Hut Simulation Engines (2D & 3D)**  
+*High-performance gravitational modeling using quadtrees, hashed-octrees, and Morton-ordered spatial hierarchies.*
 
-### Digital / FPGA & Embedded
+Designed from mathematical first principles and optimized for:
+- **Adaptive spatial resolution**
+- **O(N log N)** force evaluation
+- **Interactive visualization**
+- **Stable symplectic integration**
 
-- Verilog RTL: FSMs, I²C, UART, PWM, XADC front-ends, CDC synchronization  
-- VGA timing cores, HUD engines, framebuffer pipelines, and logo/overlay modules  
-- Q-format fixed-point modeling (Q1.15) for temperature, angle, duty, and scaling  
-- Nexys A7 (Artix-7), HCS12, ARM Cortex-M, UART/I²C/SPI, mixed-signal bench work
+### **Quadtree Engine (2D)**  
+<p align="center">
+  <img src="assets/quadtree.png" width="90%">
+</p>
 
-### High-Performance C/C++ & Numerical Modeling
+### **Octree Engine (3D)**  
+<p align="center">
+  <img src="assets/octree_bounds_visual.png" width="90%">
+</p>
 
-- Barnes–Hut kernels, quadtrees, hashed-octrees, Morton ordering  
-- Numerical integration and stability-aware simulation loops  
-- CSV analytics frameworks (schema inference, transformation, modeling)  
-- Tooling and libraries: modern C++17, Eigen/FFTW/OpenMP where appropriate
+### **Simulation Gallery**
+<p align="center">
+  <img src="assets/Screenshot 2024-02-21 at 2.56.35 AM.png" width="90%">
+  <img src="assets/Screenshot 2025-09-17 at 11.56.53 AM.png" width="90%">
+  <img src="assets/Screenshot 2025-09-17 at 12.04.30 PM.png" width="90%">
+</p>
 
-### Tooling & Workflow
+These engines power **galaxy simulations**, **energy-tracked N-body systems**, and **interactive exploration tools**.
 
-- Vivado Design Suite, WaveForms, MATLAB/Simulink  
-- Git/GitHub, CMake/Ninja, CI, cross-platform dev on macOS, Linux, and Windows  
+---
+
+# 🧠 Technical Focus Areas
+
+### **Digital / FPGA Engineering**
+- RTL architecture (FSMs, I²C, UART, PWM, XADC front-ends)
+- VGA graphics engines, HUD overlays, double-buffered BRAM pipelines  
+- CDC-safe design across 25 MHz ⇄ 100 MHz clock domains  
+- Q-format fixed-point modeling (Q1.15) and datapath scaling  
+- Board-level debugging with DMM, AD2 scope, and logic analysis  
+
+### **High-Performance C++**
+- Quadtree / octree spatial indexing  
+- Barnes–Hut O(N log N) force solvers  
+- Symplectic integrators, stability analysis  
+- Multi-threaded pipelines and memory-efficient layouts  
+
+### **Modeling, MATLAB, and Analysis**
+- Telemetry decoders (frame parsing + CRC)  
+- Real-time polar plots, distance-vs-time analysis  
+- Image streaming to FPGA framebuffers  
 
 ---
 
-## 📦 Selected Repositories
+# 📦 Highlighted Repositories
 
-- **FPGA_Signal_Control_System** – Integrated ToF mapping, temperature-based fan control, PIR sensing, rotary surveying, UART telemetry, and VGA HUD on an Artix-7 FPGA.  
-- **Generic_Quadtree_BarnesHut_Simulator** – 2D interactive N-body engine with adaptive quadtree partitioning and Barnes–Hut approximation.  
-- **Hashed_Octree_3D_BarnesHut** – 3D N-body framework using Morton-ordered hashed octrees for cache-friendly force evaluation.  
-- **Automated_CSV_Data_Analysis** – Modular C++17 pipeline for CSV standardization, integrity checks, and statistical modeling across large datasets.  
-- **OpenFrameworks_UI_Library** – Lightweight UI layer for visualization tools and simulation control panels.  
+### **FPGA_Signal_Control_System**  
+Integrated real-time sensor suite, VGA HUD, temperature control, and telemetry running on an Artix-7 FPGA.
+
+### **Generic_Quadtree_BarnesHut_Simulator**  
+2D gravitational engine with adaptive quadtree refinement, energy visualization, and interactive tooling.
+
+### **Hashed_Octree_3D_BarnesHut**  
+3D N-body simulation using Morton-encoded hashed octrees for highly scalable spatial subdivision.
+
+### **Automated_CSV_Data_Analysis**  
+C++17 pipeline for structured dataset modeling, transformations, and scientific diagnostics.
 
 ---
+
+# 🧰 Skills & Tools
+
+### **Hardware + RTL**
+![Verilog](https://img.shields.io/badge/HDL-Verilog-blue?style=for-the-badge)
+![FPGA](https://img.shields.io/badge/FPGA-Artix7-025?style=for-the-badge&logo=xilinx)
+![Vivado](https://img.shields.io/badge/Vivado-2023.2-green?style=for-the-badge)
+
+### **Mixed-Signal Interfaces**
+![I2C](https://img.shields.io/badge/I²C-Sensors-black?style=for-the-badge)
+![UART](https://img.shields.io/badge/UART-2Mbit%2Fs-orange?style=for-the-badge)
+![XADC](https://img.shields.io/badge/XADC-Analog--to--Digital-yellow?style=for-the-badge)
+![PWM](https://img.shields.io/badge/PWM-Control-red?style=for-the-badge)
+
+### **Software & Simulation**
+![C++](https://img.shields.io/badge/C++-HPC-00599C?style=for-the-badge&logo=cplusplus)
+![MATLAB](https://img.shields.io/badge/MATLAB-Analysis-orange?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-Visualization-blue?style=for-the-badge&logo=python)
+
+### **Workflow & Tooling**
+![Git](https://img.shields.io/badge/Git-Version_Control-grey?style=for-the-badge&logo=git)
+![Linux](https://img.shields.io/badge/Linux-Development-important?style=for-the-badge&logo=linux)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 🖼️ Project Gallery
 ### FPGA Implemented Design (Vivado)
