@@ -1,78 +1,102 @@
 # 👋 Hi, I'm David Richardson  
-Computer Engineering student specializing in **FPGA/RTL design**, **embedded systems**, and **high-performance C/C++**.
 
-I build systems from first principles — physics → math → algorithms → RTL → instrumentation.  
-My work emphasizes correctness, timing, structured dataflow, and high-quality engineering documentation.
+Computer Engineering student building systems at the intersection of **physics, mathematics, and computation** — from FPGA-based real-time sensing and control to high-performance C++ simulation engines and data analysis pipelines.
+
+I like taking ideas from first principles all the way to hardware and tools:  
+**theory → models → algorithms → RTL → instrumentation → analysis**.  
+My work emphasizes correctness, timing, structured dataflow, and rigorous documentation.
+
+---
+
+## 🔭 Current Focus
+
+- **FPGA Signal Control System** – Nexys A7 physics control lab with ToF mapping, VGA HUD, UART telemetry, PWM fan control, PIR sensing, and rotary-encoder surveying.  
+- **Barnes–Hut N-Body Simulations (2D & 3D)** – C++17 engines using quadtrees and hashed-octrees with Morton ordering for scalable gravitational dynamics.  
+- **Automated CSV Analysis Pipeline** – C++17 framework for dataset standardization, modeling, and diagnostics for scientific/engineering logs.
 
 ---
 
 ## 🚀 Featured Project — FPGA_Signal_Control_System  
-A mixed-signal real-time sensing, control, and visualization platform built entirely in hardware on a **Nexys A7-100T (Artix-7)** FPGA.
 
-### What it does
+A mixed-signal real-time measurement and control platform built entirely in hardware on a **Nexys A7-100T (Artix-7)**.
+
+**What it does**
+
 - **2D spatial mapping** using a Pmod **Time-of-Flight (ISL29501)** sensor swept over angle  
-- **Temperature monitoring** via XADC → **PWM fan control** with hysteresis  
-- **PIR-based occupancy detection**  
-- **Rotary encoder**–driven surveying and interaction  
-- **Structured UART telemetry** (timestamp, θ_q15, dist_mm, temperature, duty, CRC)  
-- **Full 640×480 VGA visualization pipeline**:  
-  - ToF range plot  
-  - HUD panel (temperature, duty, fan logic, PIR, UART counters, angle widgets)  
-  - Double-buffered image/logo viewport streamed via UART  
+- **Temperature telemetry → PWM fan control** with hysteresis and occupancy extensions  
+- **PIR motion sensing** with temporal decay logic  
+- **Rotary encoder–driven surveying** and HUD interaction  
+- **Structured UART telemetry** (timestamp, θ_q15, dist_mm, temperature, duty, status, CRC)  
+- **Full 640×480 VGA pipeline**:
+  - ToF range plot with framebuffer + rings/axes  
+  - Right-side HUD (temperature bar, fan tiles, PIR, UART counters, angle indicators)  
+  - Double-buffered logo/image viewport streamed over UART  
 
-This system is fully synchronous (100 MHz), with clean CDC boundaries, fixed-point Q1.15 numerics, and ready/valid streaming between all major modules.  
-A complete architecture description is documented in my project report and cheat sheet.  
-:contentReference[oaicite:0]{index=0}  
-:contentReference[oaicite:1]{index=1}  
-:contentReference[oaicite:2]{index=2}
+**How it’s built**
+
+- Single 100 MHz fabric clock, with tick-enable–based slow behavior  
+- Q1.15 fixed-point numerics shared between RTL, MATLAB, and C++ tools  
+- CDC-safe bridges to a 25 MHz pixel clock domain  
+- Ready/valid streaming between ToF sensor, packetizer, UART TX/RX, and video/telemetry paths  
+
+(Full theory-of-operation, cheat sheet, and poster live in the project repo and portfolio.)
 
 ---
 
-## 🛠️ Technical Focus Areas
+## 🧠 Technical Focus Areas
 
-### **Digital / FPGA Engineering**
+### Digital / FPGA & Embedded
+
 - Verilog RTL: FSMs, I²C, UART, PWM, XADC front-ends, CDC synchronization  
-- VGA graphics engines (timing cores, colorizers, HUD overlays, framebuffer pipelines)  
-- Q1.15 fixed-point design for angles, temperature, and duty cycles  
-- Vivado: XDC constraints, Tcl automation, block-RAM architectures, implementation debugging  
+- VGA timing cores, HUD engines, framebuffer pipelines, and logo/overlay modules  
+- Q-format fixed-point modeling (Q1.15) for temperature, angle, duty, and scaling  
+- Nexys A7 (Artix-7), HCS12, ARM Cortex-M, UART/I²C/SPI, mixed-signal bench work
 
-### **Embedded / Mixed-Signal Systems**
-- Time-of-Flight ranging (ISL29501)  
-- PIR motion sensing and temporal decay filters  
-- Closed-loop cooling control with occupancy-aware logic  
-- Rotary encoders, servos, and surveying FSMs  
-- MATLAB telemetry pipelines, decoders, and live plotting
+### High-Performance C/C++ & Numerical Modeling
 
-### **High-Performance C/C++ & Modeling**
-- Spatial data structures (quadtrees, hashed-octrees, Morton ordering)  
-- Barnes-Hut N-body simulations (2D + 3D)  
-- Modular CSV parsing / analysis frameworks  
-- Numerics, physics-informed modeling, and algorithm optimization
+- Barnes–Hut kernels, quadtrees, hashed-octrees, Morton ordering  
+- Numerical integration and stability-aware simulation loops  
+- CSV analytics frameworks (schema inference, transformation, modeling)  
+- Tooling and libraries: modern C++17, Eigen/FFTW/OpenMP where appropriate
 
----
+### Tooling & Workflow
 
-## 📦 Highlighted Repositories
-- **FPGA_Signal_Control_System** — integrated spatial mapping, telemetry, cooling control, and VGA visualization  
-- **Automated_CSV_Data_Analysis** — modular C++ data-processing and modeling pipeline  
-- **Barnes-Hut-Simulators** — real-time gravitational engines with spatial hierarchies  
-- **MATLAB Telemetry Toolkit** — UART decoder + live polar plotting + CSV logging
+- Vivado Design Suite, WaveForms, MATLAB/Simulink  
+- Git/GitHub, CMake/Ninja, CI, cross-platform dev on macOS, Linux, and Windows  
 
 ---
 
-## 🖼️ Project Gallery (Selected Images)
-*(Add these as markdown images once pushed to your repo resources folder)*
+## 📦 Selected Repositories
 
-- FPGA implemented design (Vivado device view)  
-- RTL top-level schematic  
-- Full hardware bench setup with AD2 instrumentation  
-- MATLAB telemetry plots  
-- VGA HUD output and live ToF range map  
-- Engineering poster from project presentation
+- **FPGA_Signal_Control_System** – Integrated ToF mapping, temperature-based fan control, PIR sensing, rotary surveying, UART telemetry, and VGA HUD on an Artix-7 FPGA.  
+- **Generic_Quadtree_BarnesHut_Simulator** – 2D interactive N-body engine with adaptive quadtree partitioning and Barnes–Hut approximation.  
+- **Hashed_Octree_3D_BarnesHut** – 3D N-body framework using Morton-ordered hashed octrees for cache-friendly force evaluation.  
+- **Automated_CSV_Data_Analysis** – Modular C++17 pipeline for CSV standardization, integrity checks, and statistical modeling across large datasets.  
+- **OpenFrameworks_UI_Library** – Lightweight UI layer for visualization tools and simulation control panels.  
 
 ---
 
-## 📫 Contact
-- **LinkedIn:** https://www.linkedin.com/in/david-richardson-0099281b6/  
-- **Portfolio:** https://davidrichardson02.github.io/  
-- **Email:** 02richardsondavid@gmail.com  
+## 🖼️ Project Gallery
 
+*(Once you add the images to a repo — e.g., `assets/` — you can uncomment these.)*
+
+```markdown
+<!--
+### FPGA Implemented Design (Vivado)
+<img src="assets/device.png" width="800">
+
+### Top-Level RTL Schematic
+<img src="assets/schematic_top_level.png" width="800">
+
+### Hardware Bench Setup
+<img src="assets/FPGA_Project_Hardware.jpeg" width="800">
+
+### MATLAB Telemetry + Vivado View
+<img src="assets/MATLAB_Models2.png" width="900">
+
+### Competition / Showcase Setup
+<img src="assets/Project_Showcase.jpeg" width="900">
+
+### VGA Real-Time HUD Output
+<img src="assets/VGA_Output.jpeg" width="900">
+-->
