@@ -74,22 +74,25 @@ These engines power **galaxy simulations**, **energy-tracked N-body systems**, a
 # 🧠 Technical Focus Areas
 
 ### **Digital / FPGA Engineering**
-- RTL architecture (FSMs, I²C, UART, PWM, XADC front-ends)
-- VGA graphics engines, HUD overlays, double-buffered BRAM pipelines  
-- CDC-safe design across 25 MHz ⇄ 100 MHz clock domains  
-- Q-format fixed-point modeling (Q1.15) and datapath scaling  
-- Board-level debugging with DMM, AD2 scope, and logic analysis  
+- RTL architecture (FSMs, I²C, UART, PWM, XADC front-ends)  
+- VGA graphics engines, HUD overlays, BRAM-backed framebuffers  
+- CDC-safe design across 25 MHz ⇄ 100 MHz domains  
+- Q-format fixed-point modeling (Q1.15) unified across HDL, MATLAB, and C++  
+- Hardware-in-the-loop validation: logic analyzer, DMM, AD2 scope, UART decoders  
 
 ### **High-Performance C++**
-- Quadtree / octree spatial indexing  
-- Barnes–Hut O(N log N) force solvers  
-- Symplectic integrators, stability analysis  
-- Multi-threaded pipelines and memory-efficient layouts  
+- Quadtree / octree spatial partitioning  
+- Barnes–Hut gravitational solvers  
+- Morton (Z-order) indexing & cache-friendly data layouts  
+- Symplectic integrators (leapfrog / velocity Verlet)  
+- Real-time visualization & tooling (OpenFrameworks, custom UIs)  
 
-### **Modeling, MATLAB, and Analysis**
-- Telemetry decoders (frame parsing + CRC)  
-- Real-time polar plots, distance-vs-time analysis  
-- Image streaming to FPGA framebuffers  
+### **Mathematical Modeling & Analysis (MATLAB / C / Python)**
+- Telemetry decoders (framing, CRC verification)  
+- 1D diffusion models (explicit / implicit schemes)  
+- Stability surfaces & parametric sweeps  
+- Real-time polar plots, 2D/3D signal visualization  
+- Image streaming pipelines for FPGA framebuffers  
 
 ---
 
@@ -105,34 +108,42 @@ Integrated real-time sensor suite, VGA HUD, temperature control, and telemetry r
 3D N-body simulation using Morton-encoded hashed octrees for highly scalable spatial subdivision.
 
 ### **Automated_CSV_Data_Analysis**  
-C++17 pipeline for structured dataset modeling, transformations, and scientific diagnostics.
+C pipeline for structured dataset modeling, transformations, and scientific diagnostics.
 
 ---
 
 # 🧰 Skills & Tools
-
-### **Hardware + RTL**
-![Verilog](https://img.shields.io/badge/HDL-Verilog-blue?style=for-the-badge)
+### **Hardware, RTL & Mixed-Signal Engineering**
+![Verilog](https://img.shields.io/badge/HDL-Verilog-2b8?style=for-the-badge)
 ![FPGA](https://img.shields.io/badge/FPGA-Artix7-025?style=for-the-badge&logo=xilinx)
-![Vivado](https://img.shields.io/badge/Vivado-2023.2-green?style=for-the-badge)
-
-### **Mixed-Signal Interfaces**
-![I2C](https://img.shields.io/badge/I²C-Sensors-black?style=for-the-badge)
+![Vivado](https://img.shields.io/badge/Vivado-2023.2-28a?style=for-the-badge&logo=xilinx)
+![I2C](https://img.shields.io/badge/I²C-Sensor_Interface-444?style=for-the-badge)
 ![UART](https://img.shields.io/badge/UART-2Mbit%2Fs-orange?style=for-the-badge)
-![XADC](https://img.shields.io/badge/XADC-Analog--to--Digital-yellow?style=for-the-badge)
-![PWM](https://img.shields.io/badge/PWM-Control-red?style=for-the-badge)
+![PWM](https://img.shields.io/badge/PWM-Actuator_Control-red?style=for-the-badge)
+![XADC](https://img.shields.io/badge/XADC-Mixed_Signal-yellow?style=for-the-badge)
 
-### **Software & Simulation**
-![C++](https://img.shields.io/badge/C++-HPC-00599C?style=for-the-badge&logo=cplusplus)
-![MATLAB](https://img.shields.io/badge/MATLAB-Analysis-orange?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-Visualization-blue?style=for-the-badge&logo=python)
+### **Scientific Computing, Modeling & Simulation**
+![C++](https://img.shields.io/badge/C++17-High_Performance-00599C?style=for-the-badge&logo=cplusplus)
+![OpenFrameworks](https://img.shields.io/badge/OpenFrameworks-Visualization-1b1?style=for-the-badge)
+![MATLAB](https://img.shields.io/badge/MATLAB-Numerical_Modeling-orange?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-Scientific_Tooling-blue?style=for-the-badge&logo=python)
+![Eigen](https://img.shields.io/badge/Eigen-Linear_Algebra-lightgrey?style=for-the-badge)
+![FFTW](https://img.shields.io/badge/FFTW-Spectral_Methods-purple?style=for-the-badge)
 
-### **Workflow & Tooling**
-![Git](https://img.shields.io/badge/Git-Version_Control-grey?style=for-the-badge&logo=git)
-![Linux](https://img.shields.io/badge/Linux-Development-important?style=for-the-badge&logo=linux)
+### **Algorithmic & Mathematical Tooling**
+- Spatial data structures (quadtrees, octrees, hashed/oct Morton layouts)  
+- N-body solvers, multipole approximations, gravitational kernels  
+- Diffusion PDEs, stability surfaces, fixed-point pipelines  
+- Symplectic integrators, numerical conditioning, error analysis  
+
+### **Workflow & Engineering Infrastructure**
+![Git](https://img.shields.io/badge/Git-Version_Control-black?style=for-the-badge&logo=git)
+![Linux](https://img.shields.io/badge/Linux-Dev_Environment-important?style=for-the-badge&logo=linux)
+![CMake](https://img.shields.io/badge/CMake-Build_System-064F8C?style=for-the-badge&logo=cmake)
+![WaveForms](https://img.shields.io/badge/WaveForms-HIL_Testing-1f5?style=for-the-badge)
+![MATLAB_TBX](https://img.shields.io/badge/MATLAB-Telemetry_Toolbox-orange?style=for-the-badge)
 
 ---
-
 
 
 
