@@ -52,9 +52,8 @@
   <b>Structured. Physics-driven. Bottom-up engineering.</b>
 </p>
 
-
-I like taking ideas from first principles and building systems around them from the ground up — **physical theory → mathematical models → algorithms → RTL/C/C++/assembly → instrumentation tools → analysis and visualization**.  
-My work takes place predominantly at the intersection of **physics, mathematics, and computation** — and spans **real-time FPGA sensing and control systems**, **high-performance numerical simulation engines**, and **robust C data analysis+modeling pipelines**, unified by a focus on correctness, timing, structured dataflow, rigorous documentation, and deep technical understanding.
+I like taking ideas from first principles and building systems around them from the ground up — <b>physical theory → mathematical models → algorithms → RTL/C/C++/assembly → instrumentation tools → analysis and visualization</b>.  
+My work lives at the intersection of <b>physics, mathematics, and computation</b> — spanning <b>real-time FPGA sensing and control systems</b>, <b>high-performance numerical simulation engines</b>, and <b>robust C data-analysis + modeling pipelines</b>, unified by a focus on correctness, timing, structured dataflow, and rigorous documentation.
 
 ---
 
@@ -62,9 +61,10 @@ My work takes place predominantly at the intersection of **physics, mathematics,
 
 <p align="center">
   <a href="#overview">Overview</a> • 
-  <a href="#architecture--featured-work">Architecture & Featured Work</a> • 
+  <a href="#skills--tools">Skills &amp; Tools</a> •
+  <a href="#architecture--featured-work">Architecture &amp; Featured Work</a> • 
   <a href="#results--project-gallery">Results</a> • 
-  <a href="#languages--technical-ecosystem">Languages & Technical Ecosystem</a> • 
+  <a href="#languages--technical-ecosystem">Languages &amp; Technical Ecosystem</a> • 
   <a href="#highlighted-repositories">Repositories</a>
 </p>
 
@@ -73,15 +73,16 @@ My work takes place predominantly at the intersection of **physics, mathematics,
 # 📑 Table of Contents
 
 1. [Overview](#overview)  
-2. [Architecture & Featured Work](#architecture--featured-work)  
+2. [Skills &amp; Tools](#skills--tools)  
+3. [Architecture &amp; Featured Work](#architecture--featured-work)  
    - [FPGA Signal Control System](#fpga_signal_control_system)  
    - [Barnes–Hut Simulation Engines](#barnes–hut-simulation-engines)  
-3. [Results & Project Gallery](#results--project-gallery)  
-4. [Languages & Technical Ecosystem](#languages--technical-ecosystem)  
+4. [Results &amp; Project Gallery](#results--project-gallery)  
+5. [Languages &amp; Technical Ecosystem](#languages--technical-ecosystem)  
    - [Badges](#badges)  
    - [Ecosystem Summary](#ecosystem-summary)  
    - [Language → Project Mapping](#language--project-mapping)  
-5. [Highlighted Repositories](#highlighted-repositories)  
+6. [Highlighted Repositories](#highlighted-repositories)  
 
 ---
 
@@ -90,15 +91,47 @@ My work takes place predominantly at the intersection of **physics, mathematics,
 A snapshot of the systems I like to build:
 
 - Real-time FPGA sensor fusion and mixed-signal control  
-- High-performance N-body gravitational simulation (2D & 3D)  
+- High-performance N-body gravitational simulation (2D &amp; 3D)  
 - Telemetry pipelines from UART/FPGA → MATLAB/Python → visualization  
 - Deeply documented engineering flows (RTL, C/C++, math, LaTeX)
 
-My engineering approach is bottom-up and physics-aware: start from the system model, formalize it mathematically, then carry it all the way through algorithms, code, hardware, verification, and visualization.
+My engineering approach is bottom-up and physics-aware: start from the system model, formalize it mathematically, then carry it through algorithms, code, hardware, verification, and visualization.
 
 ---
 
-# 🏗️ Architecture & Featured Work
+# 🛠️ Skills &amp; Tools
+
+## Core Domains
+
+- **Digital design & FPGA/RTL** – synchronous design, CDC handling, fixed-point arithmetic, timing closure  
+- **Embedded & low-level systems** – register-level work, bare-metal flows, peripheral bring-up  
+- **Numerical methods & simulation** – N-body gravity, spatial data structures, stability and error analysis  
+- **Data analysis & modeling** – structured datasets, telemetry decoding, algorithmic post-processing  
+
+## FPGA / RTL & Embedded
+
+- Designing **CDC-safe Verilog** modules (UART, I²C, PWM, VGA, XADC front-ends)  
+- Building **hardware-only pipelines** for sensing, control, and visualization (no soft CPU)  
+- Implementing **ready/valid datapaths**, state machines, and hierarchical module partitioning  
+- Working with **Vivado**: non-project flows, Tcl-based regeneration, XDC constraints, timing reports  
+
+## Algorithms, Simulation & Data
+
+- **Barnes–Hut N-body engines** using quadtrees and Morton-encoded hashed octrees  
+- **Q1.15 fixed-point** control logic and mapping between physical units and digital representations  
+- **Telemetry chains**: FPGA → UART → CSV → MATLAB/Python visualization  
+- Designing automated generators (e.g., C tools that emit LaTeX quizzes and answer keys) to convert structured models into polished documents  
+
+## Tooling & Workflow
+
+- **Versioned, documented flows** – READMEs, diagrams, and LaTeX reports alongside code  
+- **Instrumentation-aware design** – logic-analyzer traces, scope captures, and bench correlation  
+- **Repeatable builds** – Tcl for Vivado, structured directory layouts, and scripted regeneration  
+- Focus on **explainable engineering** – every major block has a theory-of-operation and dataflow story behind it  
+
+---
+
+# 🏗️ Architecture &amp; Featured Work
 
 ## <a name="fpga_signal_control_system"></a>⚡ FPGA_Signal_Control_System (Artix-7)
 
@@ -118,11 +151,11 @@ My engineering approach is bottom-up and physics-aware: start from the system mo
 
 ---
 
-## <a name="barnes–hut-simulation-engines"></a>🌌 Barnes–Hut Simulation Engines (2D & 3D)
+## <a name="barnes–hut-simulation-engines"></a>🌌 Barnes–Hut Simulation Engines (2D &amp; 3D)
 
 High-performance gravitational modeling built around:
 
-- Adaptive quadtrees & Morton-encoded hashed octrees  
+- Adaptive quadtrees &amp; Morton-encoded hashed octrees  
 - O(N log N) multipole approximations  
 - Stable symplectic integration (leapfrog, velocity Verlet)  
 - Real-time visualization, energy tracking, and parameter exploration  
@@ -134,7 +167,7 @@ High-performance gravitational modeling built around:
 
 ---
 
-# 🎛️ Results & Project Gallery
+# 🎛️ Results &amp; Project Gallery
 
 <details>
 <summary><b>Click to expand project visuals</b></summary><br>
@@ -162,7 +195,7 @@ High-performance gravitational modeling built around:
 
 ---
 
-# 🧰 Languages & Technical Ecosystem
+# 🧰 Languages &amp; Technical Ecosystem
 
 This combines badges, short descriptions, and direct mapping to projects.
 
@@ -184,7 +217,7 @@ This combines badges, short descriptions, and direct mapping to projects.
 
 ## 📚 Ecosystem Summary
 
-### Programming & HDL
+### Programming &amp; HDL
 - 💠 **C** — embedded utilities, telemetry decoders, dataset tools  
 - 💠 **C++17** — Barnes–Hut engines, Morton-ordered spatial structures  
 - 🔧 **Verilog RTL** — VGA pipelines, UART/I²C/PWM, XADC front-ends, fixed-point logic  
@@ -194,9 +227,9 @@ This combines badges, short descriptions, and direct mapping to projects.
 - 📐 **MATLAB** — numerical modeling, telemetry analysis, real-time plotting  
 - 🐍 **Python** — scripts, CSV ingestion, visualization helpers  
 
-### Documentation & Build Infrastructure
+### Documentation &amp; Build Infrastructure
 - ✍️ **LaTeX** — engineering reports, posters, derivations  
-- 🔗 **Markdown** — GitHub docs & READMEs  
+- 🔗 **Markdown** — GitHub docs &amp; READMEs  
 - 🛠️ **Tcl** — Vivado non-project builds, automated regeneration  
 
 ---
@@ -208,8 +241,8 @@ This combines badges, short descriptions, and direct mapping to projects.
 | **C** | UART log decoders, MATLAB bridge, tools | — | Dataset modeling, parsers | Sensor utilities | — |
 | **C++17** | Host-side visualizers | Full Barnes–Hut engines, Morton grids | — | — | — |
 | **Verilog RTL** | VGA engine, HUD overlay, I²C, UART, PWM, XADC | — | — | — | — |
-| **Assembly** | — | — | — | HCS12/ARM register-level labs & drivers | — |
-| **MATLAB** | Telemetry decoding, range plots | Stability & energy sweeps | — | — | Figures & analysis |
+| **Assembly** | — | — | — | HCS12/ARM register-level labs &amp; drivers | — |
+| **MATLAB** | Telemetry decoding, range plots | Stability &amp; energy sweeps | — | — | Figures &amp; analysis |
 | **Python** | CSV ingestion, log tooling | Visualization helpers | Automation scripts | — | — |
 | **LaTeX** | FPGA project reports | Simulation write-ups | Data pipeline theory | Coursework | — |
 | **Tcl** | Vivado automation, project regeneration | — | — | — | Build scripts |
