@@ -77,26 +77,29 @@ A mixed-signal real-time measurement and control platform built entirely in hard
 ---
 
 ## 🖼️ Project Gallery
-
-*(Once you add the images to a repo — e.g., `assets/` — you can uncomment these.)*
-
 ```markdown
 
 ### FPGA Implemented Design (Vivado)
-<img src="assets/device.png" width="800">
+<img width="600" height="833" alt="device" src="https://github.com/user-attachments/assets/c5d7a079-df77-4224-8286-96f56844d270" />
+
 
 ### Top-Level RTL Schematic
-<img src="assets/schematic_top_level.png" width="800">
+<img width="1600" height="900" alt="FPGA_Schematic_Minimized" src="https://github.com/user-attachments/assets/d726d9dc-9c0f-4bc3-82c3-3efed9e8fda4" />
+
 
 ### Hardware Bench Setup
-<img src="assets/FPGA_Project_Hardware.jpeg" width="800">
+![FPGA_Project_Hardware](https://github.com/user-attachments/assets/13c20e2c-417c-4870-bf42-34b2b5f2e4ed)
+
 
 ### MATLAB Telemetry + Vivado View
-<img src="assets/MATLAB_Models2.png" width="900">
+<img width="2054" height="1217" alt="MATLAB_Models1" src="https://github.com/user-attachments/assets/02e8776b-5178-493b-b479-c464a6d8c6e0" />
+<img width="2056" height="1329" alt="MATLAB_Models2" src="https://github.com/user-attachments/assets/973b8193-e1a7-4f96-be91-c27db3f349ad" />
+
 
 ### Competition / Showcase Setup
-<img src="assets/Project_Showcase.jpeg" width="900">
+![Project_Showcase](https://github.com/user-attachments/assets/62af5527-ce3a-4a05-82eb-2ae0886e089f)
+
 
 ### VGA Real-Time HUD Output
-<img src="assets/VGA_Output.jpeg" width="900">
+![VGA_Output](https://github.com/user-attachments/assets/f93a67c1-1c55-498d-ba6d-71f74f197d44)
 
