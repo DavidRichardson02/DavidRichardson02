@@ -77,8 +77,6 @@ A mixed-signal real-time measurement and control platform built entirely in hard
 ---
 
 ## 🖼️ Project Gallery
-```markdown
-
 ### FPGA Implemented Design (Vivado)
 <img width="600" height="833" alt="device" src="https://github.com/user-attachments/assets/c5d7a079-df77-4224-8286-96f56844d270" />
 
