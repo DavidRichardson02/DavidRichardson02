@@ -41,11 +41,8 @@ It integrates:
 
 ## 📘 Highlighted Repositories
 - **FPGA_Signal_Control_System** — complete sensing + control + VGA HUD engine  
-- **Automated_CSV_Data_Analysis** — modular C++ analysis framework  
-- **MATLAB Telemetry Toolkit** — decoders, live plotting, CSV loggers  
-- **Barnes-Hut Gravitational Simulator** — quadtree + hashed-octree engines
-
-*(I can auto-generate short descriptions for each repo if you want to polish them.)*
+- **Automated_CSV_Data_Analysis** — modular C analysis framework  
+- **Barnes-Hut Gravitational Simulators** — quadtree + hashed-octree engines
 
 ---
 
