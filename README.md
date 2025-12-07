@@ -81,7 +81,7 @@ A mixed-signal real-time measurement and control platform built entirely in hard
 *(Once you add the images to a repo — e.g., `assets/` — you can uncomment these.)*
 
 ```markdown
-<!--
+
 ### FPGA Implemented Design (Vivado)
 <img src="assets/device.png" width="800">
 
@@ -99,4 +99,4 @@ A mixed-signal real-time measurement and control platform built entirely in hard
 
 ### VGA Real-Time HUD Output
 <img src="assets/VGA_Output.jpeg" width="900">
--->
+
