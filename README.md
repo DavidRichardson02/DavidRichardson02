@@ -12,7 +12,7 @@ My work emphasizes correctness, timing, structured dataflow, and rigorous docume
 
 - **FPGA Signal Control System** – Nexys A7 physics control lab with ToF mapping, VGA HUD, UART telemetry, PWM fan control, PIR sensing, and rotary-encoder surveying.  
 - **Barnes–Hut N-Body Simulations (2D & 3D)** – C++17 engines using quadtrees and hashed-octrees with Morton ordering for scalable gravitational dynamics.  
-- **Automated CSV Analysis Pipeline** – C++17 framework for dataset standardization, modeling, and diagnostics for scientific/engineering logs.
+- **Automated CSV Analysis Pipeline** – C framework for dataset standardization, modeling, and diagnostics for scientific/engineering logs.
 
 ---
 
