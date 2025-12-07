@@ -61,9 +61,10 @@ Designed from mathematical first principles and optimized for:
 
 ### **Simulation Gallery**
 <p align="center">
-  <img src="assets/Screenshot 2024-02-21 at 2.56.35 AM.png" width="90%">
-  <img src="assets/Screenshot 2025-09-17 at 11.56.53 AM.png" width="90%">
-  <img src="assets/Screenshot 2025-09-17 at 12.04.30 PM.png" width="90%">
+  <img width="1508" height="1023" alt="Screenshot 2024-02-21 at 2 56 35 AM" src="https://github.com/user-attachments/assets/90a1477a-d7aa-4386-af1c-89f0ee0f7520" />
+<img width="2056" height="1329" alt="Screenshot 2025-09-17 at 12 04 30 PM" src="https://github.com/user-attachments/assets/baecf4a8-8363-4fc3-b17f-f81f8c22e05d" />
+<img width="2056" height="1329" alt="Screenshot 2025-09-17 at 11 56 53 AM" src="https://github.com/user-attachments/assets/91b11055-866c-4725-99e0-c761dc9b5630" />
+
 </p>
 
 These engines power **galaxy simulations**, **energy-tracked N-body systems**, and **interactive exploration tools**.
