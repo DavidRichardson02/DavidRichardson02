@@ -55,6 +55,130 @@
 I like taking ideas from first principles and building systems around them from the ground up — <b>physical theory → mathematical models → algorithms → RTL/C/C++/assembly → instrumentation tools → analysis and visualization</b>.  
 My work lives at the intersection of <b>physics, mathematics, and computation</b> — spanning <b>real-time FPGA sensing and control systems</b>, <b>high-performance numerical simulation engines</b>, and <b>robust C data-analysis + modeling pipelines</b>, unified by a focus on correctness, timing, structured dataflow, and rigorous documentation.
 
+
+
+
+
+flowchart LR
+%% ============================================================================
+%% PHYSICAL INPUTS
+%% ============================================================================
+subgraph ENV["Physical Signals"]
+  TOF_HW["ToF Sensor\n(ISL29501)"]
+  PIR_HW["PIR Motion"]
+  ENC_HW["Rotary Encoder"]
+  THERM_HW["Board / Ambient Temp"]
+end
+
+%% ============================================================================
+%% LOW-LEVEL INTERFACES (100 MHz SYS)
+%% ============================================================================
+subgraph IFACE["Sensor Interfaces (sys_clk = 100 MHz)"]
+  adxl["adxl362_if (optional accel)"]
+  tof_if["isl29501_if\nI²C master + sequencer"]
+  pir_if["pir_sync + debounce"]
+  enc_if["rotary_encoder_if"]
+  xadc_if["xadc_temp_reader"]
+end
+
+TOF_HW --> tof_if
+PIR_HW --> pir_if
+ENC_HW --> enc_if
+THERM_HW --> xadc_if
+
+%% ============================================================================
+%% ACQUISITION + CDC
+%% ============================================================================
+subgraph CDC_SYS["Acquisition + CDC"]
+  sample_valid["sample_valid strobes"]
+  accel_cdc["accel_cdc_bridge"]
+  sensor_cdc["sensor_cdc_bridge"]
+end
+
+tof_if --> sample_valid
+pir_if --> sample_valid
+enc_if --> sample_valid
+xadc_if --> sample_valid
+
+sample_valid --> sensor_cdc
+sample_valid --> accel_cdc
+
+%% ============================================================================
+%% STATE + MAPPING (SYS DOMAIN)
+%% ============================================================================
+subgraph MAP_SYS["Mapping / State (100 MHz)"]
+  angle_accum["angle_accumulator"]
+  spatial_map["spatial_mapper"]
+  map_filter["range_filter + validity gates"]
+end
+
+sensor_cdc --> angle_accum
+sensor_cdc --> map_filter
+angle_accum --> spatial_map
+map_filter --> spatial_map
+
+%% ============================================================================
+%% CONTROL
+%% ============================================================================
+subgraph CTRL["Control Logic"]
+  mode_fsm["survey_mode_fsm"]
+  fan_ctrl["fan_pwm_controller"]
+  safety["safety_interlocks"]
+end
+
+sensor_cdc --> mode_fsm
+sensor_cdc --> fan_ctrl
+safety --> fan_ctrl
+mode_fsm --> fan_ctrl
+
+%% ============================================================================
+%% VGA PIPELINE (PIXEL DOMAIN)
+%% ============================================================================
+subgraph VGA["VGA Subsystem (pix_clk = 25 MHz)"]
+  vga_timing["vga_timing_640x480"]
+  range_plot["vga_range_plot"]
+  status_ovl["vga_status_overlay"]
+  compose["vga_frame_compositor"]
+end
+
+spatial_map --> range_plot
+sensor_cdc --> status_ovl
+vga_timing --> compose
+range_plot --> compose
+status_ovl --> compose
+
+%% ============================================================================
+%% TELEMETRY
+%% ============================================================================
+subgraph UART["Telemetry Output"]
+  packetizer["mapper_packetizer"]
+  uart_tx["uart_stream_tx"]
+end
+
+spatial_map --> packetizer
+sensor_cdc --> packetizer
+fan_ctrl --> packetizer
+packetizer --> uart_tx
+
+%% ============================================================================
+%% PC-SIDE ANALYSIS
+%% ============================================================================
+subgraph PC["PC Capture & Analysis"]
+  capture["UART Capture\n(TeraTerm / Python / MATLAB)"]
+  parser["CSV / Binary Parser"]
+  analysis["Analysis + Plots\n(calibration, error, maps)"]
+end
+
+uart_tx --> capture
+capture --> parser
+parser --> analysis
+analysis --> packetizer
+
+
+
+
+
+
 ---
 
 # 🧭 Navigation
