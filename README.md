@@ -35,38 +35,6 @@ Physical theory → mathematical models → algorithms → RTL/C/C++ → instrum
         <stop offset="100%" stop-color="#facc15" />
       </linearGradient>
     </defs>
-
-    <!-- Central Node -->
-    <rect x="95" y="22" rx="6" ry="6" width="70" height="36"
-          fill="#111827" stroke="url(#grad-orbit)" stroke-width="1.4" />
-    <text x="130" y="44" text-anchor="middle" font-size="11"
-          fill="#e5e7eb" font-family="system-ui, sans-serif">
-      physics → RTL
-    </text>
-
-    <!-- Orbit Path -->
-    <ellipse cx="130" cy="40" rx="110" ry="28"
-             fill="none" stroke="rgba(148,163,184,0.4)"
-             stroke-width="1" stroke-dasharray="4 6" />
-
-    <!-- Orbiting Node -->
-    <circle cx="240" cy="40" r="4" fill="#facc15">
-      <animateMotion
-        dur="7s"
-        repeatCount="indefinite"
-        path="M 20,40 A 110,28 0 1 1 240,40 A 110,28 0 1 1 20,40"
-      />
-    </circle>
-
-    <!-- Labels -->
-    <text x="35" y="20" text-anchor="middle" font-size="9"
-          fill="#9ca3af" font-family="system-ui, sans-serif">
-      math models
-    </text>
-    <text x="225" y="66" text-anchor="middle" font-size="9"
-          fill="#9ca3af" font-family="system-ui, sans-serif">
-      visualization
-    </text>
   </svg>
 </p>
 
