@@ -10,7 +10,19 @@
 </p>
 
 <h1 align="center">David Richardson</h1>
-<h3 align="center">Computer Engineering • FPGA/RTL Systems • Physics-Driven Simulation • Automated Data Analysis</h3>
+<h3 align="center">
+Computer Engineering • FPGA/RTL Systems • Physics-Driven Simulation • Automated Data Analysis
+</h3>
+
+---
+
+<p align="center">
+<b>I build deterministic real-time FPGA sensing systems and physics-driven simulation engines from first principles.</b>
+</p>
+
+<p align="center">
+Physical theory → mathematical models → algorithms → RTL/C/C++ → instrumentation → analysis & visualization
+</p>
 
 <!-- ============================================================
    ANIMATED SVG ORBIT VISUALIZER (NO JS, GITHUB-SAFE)
@@ -23,40 +35,40 @@
         <stop offset="100%" stop-color="#facc15" />
       </linearGradient>
     </defs>
-    <!-- Central "FPGA" node -->
-    <rect x="95" y="22" rx="6" ry="6" width="70" height="36" fill="#111827" stroke="url(#grad-orbit)" stroke-width="1.4" />
-    <text x="130" y="44" text-anchor="middle" font-size="11" fill="#e5e7eb" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif">
+
+    <!-- Central Node -->
+    <rect x="95" y="22" rx="6" ry="6" width="70" height="36"
+          fill="#111827" stroke="url(#grad-orbit)" stroke-width="1.4" />
+    <text x="130" y="44" text-anchor="middle" font-size="11"
+          fill="#e5e7eb" font-family="system-ui, sans-serif">
       physics → RTL
     </text>
-    <!-- Orbit path -->
-    <ellipse cx="130" cy="40" rx="110" ry="28" fill="none" stroke="rgba(148,163,184,0.4)" stroke-width="1" stroke-dasharray="4 6" />
-    <!-- Orbiting node (animated) -->
-    <circle id="orbiter" cx="240" cy="40" r="4" fill="#facc15">
+
+    <!-- Orbit Path -->
+    <ellipse cx="130" cy="40" rx="110" ry="28"
+             fill="none" stroke="rgba(148,163,184,0.4)"
+             stroke-width="1" stroke-dasharray="4 6" />
+
+    <!-- Orbiting Node -->
+    <circle cx="240" cy="40" r="4" fill="#facc15">
       <animateMotion
         dur="7s"
         repeatCount="indefinite"
         path="M 20,40 A 110,28 0 1 1 240,40 A 110,28 0 1 1 20,40"
       />
     </circle>
+
     <!-- Labels -->
-    <text x="35" y="20" text-anchor="middle" font-size="9" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif">
+    <text x="35" y="20" text-anchor="middle" font-size="9"
+          fill="#9ca3af" font-family="system-ui, sans-serif">
       math models
     </text>
-    <text x="225" y="66" text-anchor="middle" font-size="9" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif">
-      analysis &amp; visualization
+    <text x="225" y="66" text-anchor="middle" font-size="9"
+          fill="#9ca3af" font-family="system-ui, sans-serif">
+      visualization
     </text>
   </svg>
 </p>
-
-<p align="center">
-  <b>Structured. Physics-driven. Bottom-up engineering.</b>
-</p>
-
-I like taking ideas from first principles and building systems around them from the ground up — <b>physical theory → mathematical models → algorithms → RTL/C/C++/assembly → instrumentation tools → analysis and visualization</b>.  
-My work lives at the intersection of <b>physics, mathematics, and computation</b> — spanning <b>real-time FPGA sensing and control systems</b>, <b>high-performance numerical simulation engines</b>, and <b>robust C data-analysis + modeling pipelines</b>, unified by a focus on correctness, timing, structured dataflow, and rigorous documentation.
-
-
-
 
 ---
 
@@ -64,89 +76,73 @@ My work lives at the intersection of <b>physics, mathematics, and computation</b
 
 <p align="center">
   <a href="#overview">Overview</a> • 
-  <a href="#skills--tools">Skills &amp; Tools</a> •
-  <a href="#architecture--featured-work">Architecture &amp; Featured Work</a> • 
-  <a href="#results--project-gallery">Results</a> • 
-  <a href="#languages--technical-ecosystem">Languages &amp; Technical Ecosystem</a> • 
+  <a href="#skills--tools">Skills & Tools</a> •
+  <a href="#featured-work">Featured Work</a> • 
+  <a href="#thesis-report">Featured Report</a> •
+  <a href="#results--gallery">Results</a> • 
+  <a href="#technical-ecosystem">Ecosystem</a> • 
   <a href="#highlighted-repositories">Repositories</a>
 </p>
 
 ---
 
-# 📑 Table of Contents
-
-1. [Overview](#overview)  
-2. [Skills &amp; Tools](#skills--tools)  
-3. [Architecture &amp; Featured Work](#architecture--featured-work)  
-   - [FPGA Signal Control System](#fpga_signal_control_system)  
-   - [Barnes–Hut Simulation Engines](#barnes–hut-simulation-engines)  
-4. [Results &amp; Project Gallery](#results--project-gallery)  
-5. [Languages &amp; Technical Ecosystem](#languages--technical-ecosystem)  
-   - [Badges](#badges)  
-   - [Ecosystem Summary](#ecosystem-summary)  
-   - [Language → Project Mapping](#language--project-mapping)  
-6. [Highlighted Repositories](#highlighted-repositories)  
-
----
-
 # 🔍 Overview
 
-A snapshot of the systems I like to build:
+I design and implement deeply structured engineering systems, including:
 
-- Real-time FPGA sensor fusion and mixed-signal control  
-- High-performance N-body gravitational simulation (2D &amp; 3D)  
-- Telemetry pipelines from UART/FPGA → MATLAB/Python → visualization  
-- Deeply documented engineering flows (RTL, C/C++, math, LaTeX)
+- Hardware-only FPGA sensing + control pipelines (no soft CPU)
+- CDC-disciplined real-time visualization via VGA HUD overlays
+- Barnes–Hut gravitational simulation engines (2D & 3D)
+- Telemetry chains: FPGA → UART → CSV → MATLAB analysis
+- Documentation-first workflows (RTL + math + LaTeX reports)
 
-My engineering approach is bottom-up and physics-aware: start from the system model, formalize it mathematically, then carry it through algorithms, code, hardware, verification, and visualization.
+My work emphasizes correctness, timing determinism, structured dataflow, and rigorous modeling.
 
 ---
 
-# 🛠️ Skills &amp; Tools
+# 🚀 Current Focus
+
+- Expanding **FPGA_Signal_Control_System** into full occupancy-map sensor fusion  
+- Porting spatial simulation primitives toward hardware acceleration  
+- Building instrumentation-first FPGA visualization workflows  
+
+---
+
+# 🛠️ Skills & Tools
 
 ## Core Domains
 
-- **Digital design & FPGA/RTL** – synchronous design, CDC handling, fixed-point arithmetic, timing closure  
-- **Embedded & low-level systems** – register-level work, bare-metal flows, peripheral bring-up  
-- **Numerical methods & simulation** – N-body gravity, spatial data structures, stability and error analysis  
-- **Data analysis & modeling** – structured datasets, telemetry decoding, algorithmic post-processing  
+- **FPGA/RTL Design** — synchronous systems, CDC safety, fixed-point arithmetic  
+- **Embedded Systems** — peripheral bring-up, register-level engineering  
+- **Physics Simulation** — N-body gravity, numerical stability, multipole methods  
+- **Data Pipelines** — telemetry decoding, structured datasets, modeling workflows  
 
-## FPGA / RTL & Embedded
+## FPGA / RTL Engineering
 
-- Designing **CDC-safe Verilog** modules (UART, I²C, PWM, VGA, XADC front-ends)  
-- Building **hardware-only pipelines** for sensing, control, and visualization (no soft CPU)  
-- Implementing **ready/valid datapaths**, state machines, and hierarchical module partitioning  
-- Working with **Vivado**: non-project flows, Tcl-based regeneration, XDC constraints, timing reports  
+- CDC-safe Verilog modules (UART, I²C, PWM, VGA, XADC front-ends)
+- Ready/valid datapaths, deterministic FSM pipelines
+- Q1.15 fixed-point mapping between physical units and digital logic
+- Vivado non-project automation with Tcl + timing closure discipline
 
-## Algorithms, Simulation & Data
+## Algorithms & Simulation
 
-- **Barnes–Hut N-body engines** using quadtrees and Morton-encoded hashed octrees  
-- **Q1.15 fixed-point** control logic and mapping between physical units and digital representations  
-- **Telemetry chains**: FPGA → UART → CSV → MATLAB/Python visualization  
-- Designing automated generators (e.g., C tools that emit LaTeX quizzes and answer keys) to convert structured models into polished documents  
-
-## Tooling & Workflow
-
-- **Versioned, documented flows** – READMEs, diagrams, and LaTeX reports alongside code  
-- **Instrumentation-aware design** – logic-analyzer traces, scope captures, and bench correlation  
-- **Repeatable builds** – Tcl for Vivado, structured directory layouts, and scripted regeneration  
-- Focus on **explainable engineering** – every major block has a theory-of-operation and dataflow story behind it  
+- Barnes–Hut engines using quadtrees + Morton-encoded hashed octrees  
+- O(N log N) multipole approximations with symplectic integration  
+- Energy tracking, parameter sweeps, visualization tooling  
 
 ---
 
-# 🏗️ Architecture &amp; Featured Work
+# 🏗️ Featured Work
 
-## <a name="fpga_signal_control_system"></a>⚡ FPGA_Signal_Control_System (Artix-7)
+## ⚡ FPGA_Signal_Control_System (Artix-7)
 
-*A hardware-only physics control laboratory with live visualization.*
+*A hardware-only physics control laboratory with live deterministic visualization.*
 
-- Real-time **Time-of-Flight distance mapping**  
-- **VGA HUD** with framebuffer plots and status widgets  
-- **Temperature telemetry → PWM fan control** (Q1.15 fixed-point)  
-- **PIR-based occupancy sensing**  
-- **Rotary encoder**-driven manual and automatic surveying modes  
-- **Structured UART telemetry** (timestamp, θ, distance, temp, duty, CRC)  
-- Clean **CDC boundaries**, ready/valid datapaths, disciplined module partitioning  
+- Time-of-Flight distance mapping + surveying modes  
+- VGA HUD overlay at **640×480 @ 60 Hz**  
+- UART telemetry streaming at **2 Mb/s** with CRC framing  
+- Temperature → PWM fan control via fixed-point pipelines  
+- Strict SYS→PIX CDC snapshot buses for tear-free rendering  
 
 <p align="center">
   <img src="assets/VGA_Output.jpeg" alt="VGA Output" style="max-width: 75%; height: auto;">
@@ -154,14 +150,14 @@ My engineering approach is bottom-up and physics-aware: start from the system mo
 
 ---
 
-## <a name="barnes–hut-simulation-engines"></a>🌌 Barnes–Hut Simulation Engines (2D &amp; 3D)
+## 🌌 Barnes–Hut Simulation Engines (2D & 3D)
 
 High-performance gravitational modeling built around:
 
-- Adaptive quadtrees &amp; Morton-encoded hashed octrees  
-- O(N log N) multipole approximations  
-- Stable symplectic integration (leapfrog, velocity Verlet)  
-- Real-time visualization, energy tracking, and parameter exploration  
+- Adaptive quadtrees + Morton-ordered hashed octrees  
+- O(N log N) scaling multipole approximations  
+- Leapfrog / velocity Verlet symplectic integration  
+- Real-time visualization and stability diagnostics  
 
 <p align="center">
   <img src="assets/quadtree.png" alt="Quadtree" style="max-width: 90%; height: auto;">
@@ -170,106 +166,112 @@ High-performance gravitational modeling built around:
 
 ---
 
-# 🎛️ Results &amp; Project Gallery
+# 📘 Featured Paper / Thesis Report
+<a name="thesis-report"></a>
+
+A central part of my work is producing **full engineering-grade documentation** that unifies:
+
+**physical modeling → mathematical formalization → RTL architecture → verification → visualization.**
+
+### 📄 FPGA_Signal_Control_System — Comprehensive Technical Report  
+*A thesis-style systems document covering deterministic FPGA sensing pipelines.*
+
+- CDC doctrine and why asynchronous sampling is explicitly rejected  
+- Fixed-point physical unit mapping (Q formats, scaling invariants)  
+- SYS→PIX snapshot bus architecture for tear-free VGA HUD rendering  
+- Sensor fusion telemetry pipelines (ToF + Sonar + temperature + motion)  
+- Instrumentation-first verification: logic analyzer + scope correlation  
+
+🔗 **PDF Report:** *[Sonar_Fusion_Signal_CAT_Thesis (3).pdf](https://github.com/user-attachments/files/24847481/Sonar_Fusion_Signal_CAT_Thesis.3.pdf)* 
+🔗 **LaTeX Source:** *[Uploading Sonar_Fusion_Signal_CAT_Thesis_LaTeX_Code.txt…]()*
+*  
+
+---
+
+# 🎛️ Results & Gallery
+<a name="results--gallery"></a>
 
 <details>
-<summary><b>Click to expand project visuals</b></summary><br>
+<summary><b>Click to expand project visuals</b></summary>
 
 ### FPGA Vivado Implementation
-<img src="https://github.com/user-attachments/assets/c5d7a079-df77-4224-8286-96f56844d270" alt="Device Implementation" style="max-width: 100%; height: auto;">
+<img src="https://github.com/user-attachments/assets/c5d7a079-df77-4224-8286-96f56844d270" width="100%"/>
 
 ### Top-Level RTL Schematic
-<img src="https://github.com/user-attachments/assets/d726d9dc-9c0f-4bc3-82c3-3efed9e8fda4" alt="RTL Schematic" style="max-width: 100%; height: auto;">
+<img src="https://github.com/user-attachments/assets/d726d9dc-9c0f-4bc3-82c3-3efed9e8fda4" width="100%"/>
 
 ### Hardware Bench Setup
-<img src="https://github.com/user-attachments/assets/13c20e2c-417c-4870-bf42-34b2b5f2e4ed" alt="Hardware Bench" style="max-width: 100%; height: auto;">
+<img src="https://github.com/user-attachments/assets/13c20e2c-417c-4870-bf42-34b2b5f2e4ed" width="100%"/>
 
-### MATLAB Telemetry + Vivado View
-<img src="https://github.com/user-attachments/assets/02e8776b-5178-493b-b479-c464a6d8c6e0" alt="MATLAB Models 1" style="max-width: 100%; height: auto;">
-<img src="https://github.com/user-attachments/assets/973b8193-e1a7-4f96-be91-c27db3f349ad" alt="MATLAB Models 2" style="max-width: 100%; height: auto;">
-
-### Showcase Setup
-<img src="https://github.com/user-attachments/assets/62af5527-ce3a-4a05-82eb-2ae0886e089f" alt="Showcase Setup" style="max-width: 100%; height: auto;">
+### MATLAB Telemetry + Modeling View
+<img src="https://github.com/user-attachments/assets/02e8776b-5178-493b-b479-c464a6d8c6e0" width="100%"/>
 
 ### VGA Real-Time HUD Output
-<img src="https://github.com/user-attachments/assets/f93a67c1-1c55-498d-ba6d-71f74f197d44" alt="VGA HUD" style="max-width: 100%; height: auto;">
+<img src="https://github.com/user-attachments/assets/f93a67c1-1c55-498d-ba6d-71f74f197d44" width="100%"/>
 
 </details>
 
 ---
 
-# 🧰 Languages &amp; Technical Ecosystem
+# 🧰 Technical Ecosystem
+<a name="technical-ecosystem"></a>
 
-This combines badges, short descriptions, and direct mapping to projects.
+<p align="center">
+  <img src="https://img.shields.io/badge/C-Systems_Programming-00599C?style=for-the-badge&logo=c"/>
+  <img src="https://img.shields.io/badge/C++17-High_Performance-00599C?style=for-the-badge&logo=cplusplus"/>
+  <img src="https://img.shields.io/badge/Verilog-RTL_Design-2b8?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/MATLAB-Numerical_Modeling-orange?style=for-the-badge&logo=matlab"/>
+  <img src="https://img.shields.io/badge/Python-Scientific_Tooling-blue?style=for-the-badge&logo=python"/>
+</p>
 
----
-
-## 🔤 Badges
-
-![C](https://img.shields.io/badge/C-Systems_Programming-00599C?style=for-the-badge&logo=c)
-![C++](https://img.shields.io/badge/C++17-High_Performance-00599C?style=for-the-badge&logo=cplusplus)
-![Verilog](https://img.shields.io/badge/Verilog-RTL_Design-2b8?style=for-the-badge)
-![Assembly](https://img.shields.io/badge/Assembly-HCS12_/_ARM-6e4?style=for-the-badge)
-![MATLAB](https://img.shields.io/badge/MATLAB-Numerical_Modeling-orange?style=for-the-badge&logo=matlab)
-![Python](https://img.shields.io/badge/Python-Scientific_Tooling-blue?style=for-the-badge&logo=python)
-![LaTeX](https://img.shields.io/badge/LaTeX-Documentation-008080?style=for-the-badge&logo=latex)
-![Tcl](https://img.shields.io/badge/Tcl-Vivado_Automation-424242?style=for-the-badge)
-![Markdown](https://img.shields.io/badge/Markdown-Documentation-000000?style=for-the-badge&logo=markdown)
-
----
-
-## 📚 Ecosystem Summary
-
-### Programming &amp; HDL
-- 💠 **C** — embedded utilities, telemetry decoders, dataset tools  
-- 💠 **C++17** — Barnes–Hut engines, Morton-ordered spatial structures  
-- 🔧 **Verilog RTL** — VGA pipelines, UART/I²C/PWM, XADC front-ends, fixed-point logic  
-- 🧩 **Assembly (HCS12 / ARM)** — register-level microcontroller work  
-
-### Scientific Computing
-- 📐 **MATLAB** — numerical modeling, telemetry analysis, real-time plotting  
-- 🐍 **Python** — scripts, CSV ingestion, visualization helpers  
-
-### Documentation &amp; Build Infrastructure
-- ✍️ **LaTeX** — engineering reports, posters, derivations  
-- 🔗 **Markdown** — GitHub docs &amp; READMEs  
-- 🛠️ **Tcl** — Vivado non-project builds, automated regeneration  
+- **Verilog RTL** — VGA pipelines, UART/I²C/PWM/XADC subsystems  
+- **C/C++17** — simulation engines, telemetry tooling, structured parsers  
+- **MATLAB/Python** — modeling, decoding, visualization pipelines  
+- **LaTeX** — full engineering reports, derivations, system documentation  
+- **Tcl** — Vivado automation + reproducible builds  
 
 ---
 
-## 🧬 Language → Project Mapping
+# 📊 GitHub Activity (Signal-Only)
 
-| Language | FPGA_Signal_Control_System | N-Body Barnes–Hut Engines | CSV Analysis Pipeline | MCU / Embedded Work | Documentation |
-|---------|-----------------------------|---------------------------|-----------------------|----------------------|--------------|
-| **C** | UART log decoders, MATLAB bridge, tools | — | Dataset modeling, parsers | Sensor utilities | — |
-| **C++17** | Host-side visualizers | Full Barnes–Hut engines, Morton grids | — | — | — |
-| **Verilog RTL** | VGA engine, HUD overlay, I²C, UART, PWM, XADC | — | — | — | — |
-| **Assembly** | — | — | — | HCS12/ARM register-level labs &amp; drivers | — |
-| **MATLAB** | Telemetry decoding, range plots | Stability &amp; energy sweeps | — | — | Figures &amp; analysis |
-| **Python** | CSV ingestion, log tooling | Visualization helpers | Automation scripts | — | — |
-| **LaTeX** | FPGA project reports | Simulation write-ups | Data pipeline theory | Coursework | — |
-| **Tcl** | Vivado automation, project regeneration | — | — | — | Build scripts |
-| **Markdown** | Repo docs, root README | Repo docs | Data documentation | — | All repos |
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=DavidRichardson02&show_icons=true&hide_title=true&hide_rank=true&count_private=true&include_all_commits=true&disable_animations=true" height="140"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DavidRichardson02&layout=compact&hide_title=true&langs_count=6&disable_animations=true" height="140"/>
+</p>
 
 ---
 
 # 📦 Highlighted Repositories
+<a name="highlighted-repositories"></a>
 
 <details>
-<summary><b>Click to expand repository summaries</b></summary><br>
+<summary><b>Click to expand repository summaries</b></summary>
 
-### FPGA_Signal_Control_System  
-Integrated FPGA sensing/control system with ToF mapping, VGA HUD, mixed-signal telemetry, and fan/PIR/rotary control.
+### 🔗 [FPGA_Signal_Control_System](https://github.com/DavidRichardson02/FPGA_Signal_Control_System)  
+Real-time FPGA sensing/control system with ToF mapping, VGA HUD, telemetry, fan/PIR/encoder integration.
 
-### Generic_Quadtree_BarnesHut_Simulator  
+### 🔗 [Generic_Quadtree_BarnesHut_Simulator](https://github.com/DavidRichardson02/Generic_Quadtree_BarnesHut_Simulator)  
 2D gravitational engine with adaptive quadtree refinement and interactive visualization.
 
-### Hashed_Octree_3D_BarnesHut  
-3D N-body simulation using Morton-encoded hashed octrees for scalable spatial subdivision.
+### 🔗 [Hashed_Octree_3D_BarnesHut](https://github.com/DavidRichardson02/Hashed_Octree_3D_BarnesHut)  
+3D Barnes–Hut simulation using Morton-encoded hashed octrees for scalable spatial subdivision.
 
-### Automated_CSV_Data_Analysis  
-C pipeline for structured dataset modeling, transformations, and diagnostics.
+### 🔗 [Automated_CSV_Data_Analysis](https://github.com/DavidRichardson02/Automated_CSV_Data_Analysis)  
+C pipeline for dataset modeling, transformations, diagnostics, and telemetry-grade tooling.
 
 </details>
 
 ---
+
+# 📫 Contact
+
+- LinkedIn: *https://www.linkedin.com/in/david-richardson-0099281b6/*  
+- Email: *02richardsondavid@gmail.com*  
+- Resume PDF: *[Resumë (9).pdf](https://github.com/user-attachments/files/24847510/Resume.9.pdf)*
+- Portfolio: *https://davidrichardson02.github.io/*
+
+---
+
+<p align="center">
+<b>Structured. Physics-driven. Deterministic engineering from first principles.</b>
+</p>
