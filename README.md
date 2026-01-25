@@ -182,9 +182,10 @@ A central part of my work is producing **full engineering-grade documentation** 
 - Sensor fusion telemetry pipelines (ToF + Sonar + temperature + motion)  
 - Instrumentation-first verification: logic analyzer + scope correlation  
 
-🔗 **PDF Report:** *[Sonar_Fusion_Signal_CAT_Thesis (3).pdf](https://github.com/user-attachments/files/24847481/Sonar_Fusion_Signal_CAT_Thesis.3.pdf)* 
-🔗 **LaTeX Source:** *[Uploading Sonar_Fusion_Signal_CAT_Thesis_LaTeX_Code.txt…]()*
-*  
+🔗 **PDF Report:**  
+[Sonar_Fusion_Signal_CAT_Thesis (3).pdf](https://github.com/user-attachments/files/24847481/Sonar_Fusion_Signal_CAT_Thesis.3.pdf)
+
+🔗 **LaTeX Source:** *(add repo/docs link when uploaded)*  
 
 ---
 
@@ -214,7 +215,6 @@ A central part of my work is producing **full engineering-grade documentation** 
 ---
 
 # 🧰 Technical Ecosystem
-<a name="technical-ecosystem"></a>
 
 <p align="center">
   <img src="https://img.shields.io/badge/C-Systems_Programming-00599C?style=for-the-badge&logo=c"/>
@@ -223,12 +223,6 @@ A central part of my work is producing **full engineering-grade documentation** 
   <img src="https://img.shields.io/badge/MATLAB-Numerical_Modeling-orange?style=for-the-badge&logo=matlab"/>
   <img src="https://img.shields.io/badge/Python-Scientific_Tooling-blue?style=for-the-badge&logo=python"/>
 </p>
-
-- **Verilog RTL** — VGA pipelines, UART/I²C/PWM/XADC subsystems  
-- **C/C++17** — simulation engines, telemetry tooling, structured parsers  
-- **MATLAB/Python** — modeling, decoding, visualization pipelines  
-- **LaTeX** — full engineering reports, derivations, system documentation  
-- **Tcl** — Vivado automation + reproducible builds  
 
 ---
 
@@ -242,10 +236,6 @@ A central part of my work is producing **full engineering-grade documentation** 
 ---
 
 # 📦 Highlighted Repositories
-<a name="highlighted-repositories"></a>
-
-<details>
-<summary><b>Click to expand repository summaries</b></summary>
 
 ### 🔗 [FPGA_Signal_Control_System](https://github.com/DavidRichardson02/FPGA_Signal_Control_System)  
 Real-time FPGA sensing/control system with ToF mapping, VGA HUD, telemetry, fan/PIR/encoder integration.
@@ -259,16 +249,14 @@ Real-time FPGA sensing/control system with ToF mapping, VGA HUD, telemetry, fan/
 ### 🔗 [Automated_CSV_Data_Analysis](https://github.com/DavidRichardson02/Automated_CSV_Data_Analysis)  
 C pipeline for dataset modeling, transformations, diagnostics, and telemetry-grade tooling.
 
-</details>
-
 ---
 
 # 📫 Contact
 
-- LinkedIn: *https://www.linkedin.com/in/david-richardson-0099281b6/*  
-- Email: *02richardsondavid@gmail.com*  
-- Resume PDF: *[Resumë (9).pdf](https://github.com/user-attachments/files/24847510/Resume.9.pdf)*
-- Portfolio: *https://davidrichardson02.github.io/*
+- LinkedIn: https://www.linkedin.com/in/david-richardson-0099281b6/  
+- Email: 02richardsondavid@gmail.com  
+- Resume PDF: [Resumë (9).pdf](https://github.com/user-attachments/files/24847510/Resume.9.pdf)  
+- Portfolio: https://davidrichardson02.github.io/  
 
 ---
 
