@@ -1,6 +1,6 @@
 <!-- ========================================================================= -->
 <!-- DAVID RICHARDSON — GITHUB PROFILE README                                  -->
-<!-- GRADUATE RESEARCH–ORIENTED VARIANT                                        -->
+<!-- GRADUATE RESEARCH–ORIENTED FINAL VERSION                                  -->
 <!-- ========================================================================= -->
 
 <p align="center">
@@ -225,35 +225,36 @@ A major component of the work is formal engineering documentation intended to un
 This documentation style is used to bridge design, implementation, and analysis in a way that supports both development and technical communication.
 
 **Featured Documents**  
-[AquaFusion_Sonar_Vision_System_Phase_4_Stage_A_Report](https://drive.google.com/file/d/1IjW8C4SG-DCg6Se5c6VwARdGOVL44N7i/view?usp=drive_link)
-[AquaFusion_Sonar_Vision_System_Phase_4_Stage_A_Report](https://drive.google.com/file/d/1yT_iIEWyp_7QfEyRSJ73J2E6JIOYj_Ci/view?usp=drive_link)
-[AquaFusion_Sonar_Vision_System_Phase_4_Stage_A_Report](https://drive.google.com/file/d/1v1lRXgS51Q6b2dmxpsXRAGjodAmbWUj6/view?usp=drive_link)
-[A Study of theBarnes Hut Approximation Algorithm](https://drive.google.com/file/d/11q3Khb7Zqqpasqo1dN0yi1BPINYhdY2c/view?usp=drive_link)
-[FPGA_Signal_Control_System_Report](https://drive.google.com/file/d/1zdaQ2rKjdBrTMf0NeTSyVRQpXZ3m1ddi/view?usp=drive_link)
-[Automated_CSV_Data_Analysis_Framework](https://drive.google.com/file/d/1IjPQLye8ih4bDaXriDxC3q3-ZOklNtuH/view?usp=drive_link)
-[Fourier_Series_Harmonic_Circles_Epicycle_Visualization]https://drive.google.com/file/d/1iSU7agGMc3G9a85gGrsT6vncs6b0uoIb/view?usp=drive_link
-[Voltage_Regulator_Design](https://drive.google.com/file/d/17EJT2hjBfJR-BRmtBBEozavgAhClJIIc/view?usp=drive_link)
-[Real-Time Quadtree Barnes-Hut N-Body Simulation](https://drive.google.com/file/d/15H88dQWG_YcwYj8U3Ekh4U7kCxgkBGuK/view?usp=drive_link)
-[ECE-370_Assignment_1_Quadratic_Quiz_Generator.](https://drive.google.com/file/d/1E5SxnI4okYhdcf6vU9-CebY2o8dL3gvh/view?usp=drive_link)
-[ECE-370_Assignment_1_Quadratic_Quiz_Generator.](https://drive.google.com/file/d/1xmbPL5pyLfYUJj_dD6NmH-g1AFX2QbES/view?usp=drive_link)
+[AquaFusion_Sonar_Vision_System_Phase_4_Stage_A_Report](https://drive.google.com/file/d/1IjW8C4SG-DCg6Se5c6VwARdGOVL44N7i/view?usp=drive_link)  
+[AquaFusion_Sonar_Vision_System_Phase_1_Report](https://drive.google.com/file/d/1yT_iIEWyp_7QfEyRSJ73J2E6JIOYj_Ci/view?usp=drive_link)  
+[Caelum_Sufflamen_IEEE_Report](https://drive.google.com/file/d/1v1lRXgS51Q6b2dmxpsXRAGjodAmbWUj6/view?usp=drive_link)  
+[A Study of the Barnes Hut Approximation Algorithm](https://drive.google.com/file/d/11q3Khb7Zqqpasqo1dN0yi1BPINYhdY2c/view?usp=drive_link)  
+[FPGA_Signal_Control_System_Report](https://drive.google.com/file/d/1zdaQ2rKjdBrTMf0NeTSyVRQpXZ3m1ddi/view?usp=drive_link)  
+[Automated_CSV_Data_Analysis_Framework](https://drive.google.com/file/d/1IjPQLye8ih4bDaXriDxC3q3-ZOklNtuH/view?usp=drive_link)  
+[Fourier_Series_Harmonic_Circles_Epicycle_Visualization](https://drive.google.com/file/d/1iSU7agGMc3G9a85gGrsT6vncs6b0uoIb/view?usp=drive_link)  
+[Voltage_Regulator_Design](https://drive.google.com/file/d/17EJT2hjBfJR-BRmtBBEozavgAhClJIIc/view?usp=drive_link)  
+[Real-Time Quadtree Barnes-Hut N-Body Simulation](https://drive.google.com/file/d/15H88dQWG_YcwYj8U3Ekh4U7kCxgkBGuK/view?usp=drive_link)  
+[ECE-370_Assignment_1_Quadratic_Quiz_Generator](https://drive.google.com/file/d/1E5SxnI4okYhdcf6vU9-CebY2o8dL3gvh/view?usp=drive_link)  
+[ECE-370_Assignment_1_Quadratic_Quiz_Generator_Report](https://drive.google.com/file/d/1xmbPL5pyLfYUJj_dD6NmH-g1AFX2QbES/view?usp=drive_link)
+
 ---
 
 ## Repository Highlights
 
 - [AquaFusion_Sonar_Vision_System](https://github.com/DavidRichardson02/AquaFusion_Sonar_Vision_System)  
-  FPGA sonar + camera fusion with deterministic telemetry and HUD rendering
+  Deterministic FPGA sonar-camera fusion platform with synchronized telemetry, HUD rendering, and spatial mapping.
 
 - [FPGA_Signal_Control_System](https://github.com/DavidRichardson02/FPGA_Signal_Control_System)  
-  Real-time sensing, control, and visualization on FPGA
+  Real-time FPGA sensing, control, and VGA visualization with fixed-point physical-unit pipelines.
 
 - [Generic_Quadtree_BarnesHut_Simulator](https://github.com/DavidRichardson02/Generic_Quadtree_BarnesHut_Simulator)  
-  2D Barnes–Hut simulation using adaptive quadtrees
+  2D Barnes–Hut N-body simulator using adaptive quadtrees for scalable physics-driven computation.
 
 - [Hashed_Octree_3D_BarnesHut](https://github.com/DavidRichardson02/Hashed_Octree_3D_BarnesHut)  
-  3D Barnes–Hut simulation using Morton-encoded hashed octrees
+  3D Barnes–Hut simulation using Morton-encoded hashed octrees and structured spatial aggregation.
 
 - [Automated_CSV_Data_Analysis](https://github.com/DavidRichardson02/Automated_CSV_Data_Analysis)  
-  Structured data analysis workflows for modeled and experimental datasets
+  Structured C-based data analysis framework for modeled, measured, and telemetry-oriented datasets.
 
 ---
 
