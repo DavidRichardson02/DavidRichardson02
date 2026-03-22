@@ -17,119 +17,129 @@
 </p>
 
 <p align="center">
-  Deterministic digital systems from physical principles to instrumentation, verification, and visualization.
+  Deterministic digital systems built from physical principles through instrumentation, verification, and visualization.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/FPGA-Artix--7-informational" alt="FPGA Artix-7 badge">
+  <img src="https://img.shields.io/badge/RTL-Verilog-blue" alt="Verilog badge">
+  <img src="https://img.shields.io/badge/Language-C%2FC%2B%2B-success" alt="C/C++ badge">
+  <img src="https://img.shields.io/badge/Scientific-MATLAB%20%7C%20Python-orange" alt="MATLAB Python badge">
+  <img src="https://img.shields.io/badge/Workflow-Verification--First-important" alt="Verification-first badge">
+  <img src="https://img.shields.io/badge/Documentation-LaTeX-9cf" alt="LaTeX badge">
 </p>
 
 ---
 
 ## Overview
 
-Engineering work centers on deeply structured digital systems built from first principles, with particular emphasis on:
+Engineering work centers on real-time digital systems with strong emphasis on:
 
-- deterministic FPGA sensing and control pipelines
+- deterministic FPGA sensing and control
 - explicit clock-domain crossing discipline
-- real-time telemetry and visualization
+- telemetry and visualization pipelines
 - physics-driven simulation engines
-- documentation-first technical development
+- rigorous technical documentation
+- instrumentation-backed verification
 
-Core design philosophy treats engineering as a closed loop:
+<p align="center">
+  <b>Closed-loop engineering workflow</b><br>
+  physical model → mathematical formalism → algorithm → RTL / C / C++ → instrumentation → verification → visualization
+</p>
 
-**physical model → mathematical formalism → algorithm → RTL / C / C++ implementation → instrumentation → verification → visualization**
+---
+
+## Research Interests
+
+Research interests are centered around the design of reliable, interpretable, and resource-conscious real-time systems for sensing, visualization, and computation. Current interests include deterministic FPGA architectures, sensor-fusion pipelines, embedded scientific instrumentation, fixed-point physical modeling, clock-domain-safe visualization systems, and simulation methods that preserve physical structure while scaling computationally. These directions support internship, undergraduate research, and graduate work in digital systems, embedded hardware, scientific computing, robotics, instrumentation, and real-time sensing platforms.
 
 ---
 
 ## Current Focus
 
-### AquaFusion Sonar Vision System
-A deterministic FPGA instrumentation platform that fuses sonar telemetry, camera video, spatial map accumulation, and HUD rendering into a real-time fishing and environmental-awareness system.
+- **AquaFusion Sonar Vision System**  
+  FPGA-based sonar + camera fusion with spatial mapping and HUD rendering for real-time environmental awareness.
 
-Current technical themes include:
+- **Deterministic FPGA Visualization**  
+  VGA/HDMI overlay systems with frame-stable rendering, explicit commit points, and CDC-safe telemetry transfer.
 
-- sonar acquisition using Pmod MAXSONAR
-- camera integration using Pcam 5C / OV5640
-- explicit SYS→PIX snapshot buses
-- tear-free HUD compositing
-- observability-first debug architecture
-- verification before hardware bring-up
-
-### Deterministic FPGA Visualization
-Real-time VGA and HDMI overlay systems with frozen frame semantics, explicit telemetry commit points, and CDC-safe rendering boundaries.
-
-### Physics-Driven Simulation
-High-performance Barnes–Hut gravitational simulation engines in 2D and 3D, built with strong emphasis on numerical structure, spatial hierarchy, and performance scaling.
+- **Physics-Driven Simulation**  
+  Barnes–Hut gravitational engines in 2D and 3D using structured spatial hierarchies and performance-aware numerical methods.
 
 ---
 
-## Featured Projects
+## Featured Work
 
-### AquaFusion_Sonar_Vision_System
-**FPGA sonar + camera fusion for real-time environmental awareness and heads-up display rendering**
-
-AquaFusion is a portfolio-grade FPGA instrument designed around deterministic execution and observability. The system fuses:
-
-- ultrasonic ranging telemetry
-- camera video input
-- spatial mapping
-- persistent overlay rendering
-- real-time debug visibility
-
-Key engineering concerns include:
-
-- synchronized telemetry snapshot publication
-- explicit clock-domain boundaries
-- no asynchronous multi-bit sampling
-- stable frame-aligned visualization
-- instrumentation-driven hardware validation
-
-**Representative architecture themes**
-- sonar UART parsing and validity tracking
-- camera control and SCCB configuration
-- HUD overlay compositing
-- map/history accumulation
-- debug counters, freshness timers, and fault observability
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🌊 AquaFusion_Sonar_Vision_System</h3>
+      <p><b>FPGA sonar + camera fusion for real-time environmental awareness and HUD rendering</b></p>
+      <p>
+        Deterministic instrumentation platform integrating ultrasonic ranging, camera video,
+        spatial map accumulation, and synchronized overlay rendering.
+      </p>
+      <p>
+        <b>Focus areas:</b><br>
+        sonar acquisition • OV5640/Pcam control • SYS→PIX snapshot buses • tear-free HUD compositing • observability-first debug
+      </p>
+      <p>
+        <a href="https://github.com/DavidRichardson02/AquaFusion_Sonar_Vision_System">Repository</a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🖥️ FPGA_Signal_Control_System</h3>
+      <p><b>Hardware-only sensing, control, and visualization on Artix-7</b></p>
+      <p>
+        Real-time FPGA control laboratory built around physical-unit mapping,
+        live VGA output, UART telemetry, and deterministic synchronous pipelines.
+      </p>
+      <p>
+        <b>Highlights:</b><br>
+        VGA HUD • fixed-point control • UART telemetry • PWM generation • sensor instrumentation • CDC-safe rendering
+      </p>
+      <p>
+        <a href="https://github.com/DavidRichardson02/FPGA_Signal_Control_System">Repository</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🌌 Generic_Quadtree_BarnesHut_Simulator</h3>
+      <p><b>2D Barnes–Hut gravitational simulation engine</b></p>
+      <p>
+        Adaptive quadtree-based N-body simulation emphasizing numerical structure,
+        approximation quality, and visualization.
+      </p>
+      <p>
+        <b>Themes:</b><br>
+        spatial subdivision • O(N log N) approximation • integration methods • diagnostics
+      </p>
+      <p>
+        <a href="https://github.com/DavidRichardson02/Generic_Quadtree_BarnesHut_Simulator">Repository</a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🧊 Hashed_Octree_3D_BarnesHut</h3>
+      <p><b>3D Barnes–Hut engine using Morton-encoded hashed octrees</b></p>
+      <p>
+        3D gravitational simulation framework focused on scalable spatial indexing,
+        hierarchical aggregation, and performance-oriented implementation.
+      </p>
+      <p>
+        <b>Themes:</b><br>
+        Morton codes • hashed octrees • multipole approximation • structured C++ design
+      </p>
+      <p>
+        <a href="https://github.com/DavidRichardson02/Hashed_Octree_3D_BarnesHut">Repository</a>
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### FPGA_Signal_Control_System
-**Hardware-only sensing, control, and visualization on Artix-7**
-
-A real-time FPGA control laboratory built around deterministic pipelines and live VGA output.
-
-Highlights:
-- VGA HUD rendering at **640×480 @ 60 Hz**
-- fixed-point control and physical-unit mapping
-- UART telemetry streaming
-- PWM output generation
-- temperature and motion instrumentation
-- CDC-safe snapshot transfer into the rendering domain
-
-<p align="center">
-  <img src="assets/VGA_Output.jpeg" alt="FPGA signal control system VGA output" style="max-width: 75%; height: auto;">
-</p>
-
----
-
-### Barnes–Hut Simulation Engines
-**Physics-driven gravitational simulation in 2D and 3D**
-
-High-performance simulation work built around structured spatial decomposition and scalable force approximation.
-
-Key elements:
-- adaptive quadtrees
-- Morton-encoded hashed octrees
-- multipole approximation
-- symplectic integration
-- energy and stability analysis
-- real-time visualization tooling
-
-<p align="center">
-  <img src="assets/quadtree.png" alt="Barnes-Hut quadtree visualization" style="max-width: 90%; height: auto;">
-  <img src="assets/octree_bounds_visual.png" alt="Barnes-Hut octree visualization" style="max-width: 90%; height: auto;">
-</p>
-
----
-
-## Engineering Interests
+## Engineering Areas
 
 ### FPGA / RTL Systems
 - synchronous digital architecture
@@ -137,68 +147,39 @@ Key elements:
 - VGA / HDMI rendering pipelines
 - UART, I2C, PWM, and sensor interfaces
 - fixed-point arithmetic and physical-unit mapping
-- observability-first instrumentation design
 
 ### Embedded and Low-Level Systems
 - register-level peripheral reasoning
-- hardware/software interface discipline
-- real-bench validation workflows
 - timing-aware protocol debugging
+- instrumentation-driven bring-up
+- hardware/software interface discipline
 
 ### Simulation and Numerical Computing
 - N-body gravitational systems
-- hierarchical spatial data structures
-- performance-oriented C++ design
-- numerical stability and error-aware modeling
+- quadtrees and octrees
+- multipole approximation
+- numerical stability and performance scaling
 
-### Telemetry and Data Pipelines
-- structured binary and CSV pipelines
-- MATLAB and Python analysis workflows
-- automated telemetry decoding
-- experimental visualization and diagnostics
-
-### Technical Documentation
-- thesis-style engineering reports
-- architecture documentation
-- timing and interface contracts
-- derivation-centered technical writing
-- LaTeX-based reproducible documentation
+### Documentation and Reproducibility
+- LaTeX technical reports
+- architecture contracts and timing documentation
+- verification methodology
+- Tcl-based build and regeneration flows
 
 ---
 
 ## Skills and Tools
 
-### Languages
-- Verilog
-- C
-- C++
-- Python
-- MATLAB
-- Tcl
-- LaTeX
-- Assembly
-
-### FPGA / Hardware Toolchain
-- Xilinx Vivado
-- XDC constraints
-- non-project Tcl flows
-- timing closure workflows
-- waveform and logic-level debug
-
-### Bench Instrumentation
-- Digilent Analog Discovery 2
-- Digilent Analog Discovery 3
-- oscilloscope / logic analyzer correlation
-- protocol timing validation
-- hardware bring-up debugging
-
-### Core Technical Themes
-- deterministic state machines
-- ready/valid dataflow
-- fixed-point systems
-- synchronous rendering
-- spatial mapping
-- simulation-backed engineering
+<p>
+  <img src="https://img.shields.io/badge/Verilog-RTL-blueviolet" alt="Verilog badge">
+  <img src="https://img.shields.io/badge/C-Systems-informational" alt="C badge">
+  <img src="https://img.shields.io/badge/C%2B%2B17-Simulation-00599C" alt="C++17 badge">
+  <img src="https://img.shields.io/badge/Python-Analysis-3776AB" alt="Python badge">
+  <img src="https://img.shields.io/badge/MATLAB-Modeling-orange" alt="MATLAB badge">
+  <img src="https://img.shields.io/badge/Tcl-Vivado%20Flows-critical" alt="Tcl badge">
+  <img src="https://img.shields.io/badge/LaTeX-Documentation-008080" alt="LaTeX badge">
+  <img src="https://img.shields.io/badge/Vivado-Xilinx-red" alt="Vivado badge">
+</p>
 
 ---
 
@@ -226,54 +207,25 @@ Key elements:
 
 ---
 
-## Featured Documentation
+## Featured Report
 
-A major part of the portfolio is not only implementation, but rigorous technical explanation.
+A major part of this portfolio is not only implementation, but rigorous engineering explanation.
 
-Documentation work typically unifies:
+Representative documentation themes include:
 
 - physical motivation
 - mathematical formulation
-- architectural contracts
-- implementation details
-- verification strategy
-- instrumentation and analysis
+- interface and timing contracts
+- CDC doctrine
+- verification methodology
+- instrumentation-backed hardware validation
 
-### Example Report
-**FPGA_Signal_Control_System — Comprehensive Technical Report**
-
-Topics include:
-- CDC doctrine and forbidden crossing patterns
-- fixed-point scaling and physical-unit contracts
-- SYS→PIX snapshot architecture
-- telemetry and visualization pipelines
-- verification with instrumentation correlation
-
-**PDF Report**  
+**Featured PDF**  
 [Sonar_Fusion_Signal_CAT_Thesis (3).pdf](https://github.com/user-attachments/files/24847481/Sonar_Fusion_Signal_CAT_Thesis.3.pdf)
 
 ---
 
-## Highlighted Repositories
-
-### [AquaFusion_Sonar_Vision_System](https://github.com/DavidRichardson02/AquaFusion_Sonar_Vision_System)
-Deterministic FPGA sonar + camera fusion system with HUD rendering, telemetry, and spatial mapping.
-
-### [FPGA_Signal_Control_System](https://github.com/DavidRichardson02/FPGA_Signal_Control_System)
-Real-time FPGA sensing and control system with VGA HUD, telemetry, and fixed-point physical pipelines.
-
-### [Generic_Quadtree_BarnesHut_Simulator](https://github.com/DavidRichardson02/Generic_Quadtree_BarnesHut_Simulator)
-2D gravitational simulation using adaptive quadtrees and scalable Barnes–Hut approximation.
-
-### [Hashed_Octree_3D_BarnesHut](https://github.com/DavidRichardson02/Hashed_Octree_3D_BarnesHut)
-3D Barnes–Hut engine using Morton-encoded hashed octrees for spatial subdivision.
-
-### [Automated_CSV_Data_Analysis](https://github.com/DavidRichardson02/Automated_CSV_Data_Analysis)
-C-based pipeline for structured data modeling, transformations, diagnostics, and telemetry-grade analysis.
-
----
-
-## GitHub Activity
+## GitHub Activity (Signal-Only)
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=DavidRichardson02&show_icons=true&hide_title=true&hide_rank=true&count_private=true&include_all_commits=true&disable_animations=true" height="140"/>
